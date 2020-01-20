@@ -1,0 +1,6 @@
+framework module svgaplayer_flutter {
+  umbrella header "svgaplayer_flutter-umbrella.h"
+
+  export *
+  module * { export * }
+}

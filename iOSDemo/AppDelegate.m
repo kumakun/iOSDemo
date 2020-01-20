@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <FlutterPluginRegistrant/GeneratedPluginRegistrant.h>
+#import <Flutter/Flutter.h>
 
 @interface AppDelegate ()
 
@@ -19,7 +21,12 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [UIStoryboard storyboardWithName:@"Main" bundle:nil].instantiateInitialViewController;
     [self.window makeKeyAndVisible];
-    return YES;
+    
+    self.flutterEngine = [[FlutterEngine alloc] initWithName:@"my flutter engine"];
+    // Runs the default Dart entrypoint with a default Flutter route.
+    [self.flutterEngine run];
+    [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
+    return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
 

@@ -1,3 +1,35 @@
-PODFILE CHECKSUM: 00059161760e5d434bca9d4894ed5a31e5738f87
+PODS:
+  - Flutter (1.0.0)
+  - flutter_library (0.0.1):
+    - Flutter
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+    - svgaplayer_flutter
+  - svgaplayer_flutter (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `../flutter_library/.ios/Flutter/engine`)
+  - flutter_library (from `../flutter_library/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `../flutter_library/.ios/Flutter/FlutterPluginRegistrant`)
+  - svgaplayer_flutter (from `../flutter_library/.ios/Flutter/.symlinks/svgaplayer_flutter/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../flutter_library/.ios/Flutter/engine"
+  flutter_library:
+    :path: "../flutter_library/.ios/Flutter"
+  FlutterPluginRegistrant:
+    :path: "../flutter_library/.ios/Flutter/FlutterPluginRegistrant"
+  svgaplayer_flutter:
+    :path: "../flutter_library/.ios/Flutter/.symlinks/svgaplayer_flutter/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_library: bc909fef8ddeba2db7020c2490689440b22dcf64
+  FlutterPluginRegistrant: d53dca6da58b5dbd4adc039090ab2914f5c34dc9
+  svgaplayer_flutter: 54a6973be40a849244ba02fdffcba9094f10f68f
+
+PODFILE CHECKSUM: 85d62a8a7d772b421caac96d5168d56c5bdffb94
 
 COCOAPODS: 1.8.4

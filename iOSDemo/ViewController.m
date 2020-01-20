@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+@import Flutter;
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *btn;
+@property (weak, nonatomic) IBOutlet UIView *container;
 
 @end
 
@@ -16,8 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.btn addTarget:self action:@selector(showFlutter) forControlEvents:UIControlEventTouchUpInside];
 }
 
-
+- (void)showFlutter {
+    FlutterEngine *flutterEngine = ((AppDelegate *)UIApplication.sharedApplication.delegate).flutterEngine;
+    FlutterViewController *flutterViewController = [[FlutterViewController alloc] initWithEngine:flutterEngine nibName:nil bundle:nil];
+//    [self presentViewController:flutterViewController animated:YES completion:nil];
+    [self.container addSubview:flutterViewController.view];
+    flutterViewController.view.frame = self.container.bounds;
+    [self addChildViewController:flutterViewController];
+    [flutterViewController didMoveToParentViewController:self];
+    
+    
+}
 @end
